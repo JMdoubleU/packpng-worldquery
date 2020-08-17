@@ -1,0 +1,39 @@
+area:
+  # World name
+  world: world
+
+  # Origin point
+  origin:
+    x: 0
+    y: 64
+    z: 0
+
+  # Block radius
+  radiusSize:
+    x: 15
+    y: 15
+    z: 15
+
+  # Target block material names
+  # See https://papermc.io/javadocs/paper/1.13/org/bukkit/Material.html for valid names
+  materials:
+    - DIRT
+    - GRASS_BLOCK
+    - OAK_LOG
+    - OAK_LEAVES
+    - SAND
+    - STONE
+
+output:
+  # Directory to write csv to
+  directory: /var/www/html
+  # Filename of csv
+  filename: area.csv
+  # File write interval
+  # NOTE: If no changes since last write, file will not be written.
+  updateIntervalSeconds: 10
+
+  # Enable (inefficient...) archiving of all csv versions
+  archive:
+    enabled: true
+    directory: /var/www/html/archive
